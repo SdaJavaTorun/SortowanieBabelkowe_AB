@@ -8,6 +8,7 @@ public class Main {
 
         int[] tab = {4,7,8,3,5};
         int temp = 0;
+        boolean flag = true;
 
         for (int i=0; i<tab.length; i++) {
             for (int j=0; j<tab.length-1; j++) {
@@ -16,8 +17,11 @@ public class Main {
                     tab[j+1]=tab[j];
                     tab[j] = temp;
                 }
+                flag = false;
             }
-        }
+            if (flag=false) {
+                break;
+            }                               }
         System.out.println(Arrays.toString(tab));
     }
 }
